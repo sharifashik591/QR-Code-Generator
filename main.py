@@ -1,4 +1,5 @@
-
+import pyautogui
+import time
 import streamlit as st
 from PIL import Image
 import qrcode
@@ -10,22 +11,32 @@ qr = qrcode.QRCode(
     box_size=10,
     border=2)
 
+st.title('QR code generator')
+
+# Colour picker
+col1, col2 = st.columns(2)
+with col1:
+    b_color = st.color_picker('Pick Background Color', '#00f900')
+    st.write('Background color code is', b_color)
+with col2:
+    f_color = st.color_picker('Pick fill Color', '#0e0e0e')
+    st.write('The current color code is', f_color)
+
 # input with streamlit
 text_input = st.text_input("Enter URL 👇",)
 st.write("You entered: ", text_input)
-col1, col2, col3 = st.columns(3)
 
 if text_input:
     # generate QR code
     qr.add_data(str(text_input))
     qr.make(fit=True)
-    img = qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
+    img = qr.make_image(back_color=b_color, fill_color=f_color)
 
     # Save image in custom directory
     img.save("QR img file/some_file.png")
     # show image
     image = Image.open('QR img file/some_file.png')
-
+    col1, col2, col3 = st.columns(3)
     with col2:
         st.image(image, caption='QR Code')
 
@@ -40,7 +51,13 @@ if text_input:
                 mime="image/png",
                 on_click=handle_upsert(),
             )
-
+        if btn:
+            st.success('Download Complete!', icon="✅")
+            # Sleep for 3 second
+            time.sleep(3)
+            # refresh the page
+            pyautogui.press('f5')
+        # st.success("Success")
 
 
 
