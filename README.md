@@ -9,4 +9,6 @@
 - [x] Click download
 - [x] Page will automatically reload
 
-[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/AaQBsCmQpq0)
+[![Watch the video]](https://youtu.be/AaQBsCmQpq0)
+
+[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://youtu.be/AaQBsCmQpq0")
