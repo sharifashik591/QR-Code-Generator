@@ -11,10 +11,10 @@
 
 ### How to download and install this app
 
-  > Clone the app into a folder.
-  > Open it with IDE.
-  > pip install requirement.txt.
-  > Write in terminal 'streamlit run .\main.py'
+  1. Clone the app into a folder.
+  2. Open it with IDE.
+  3. pip install requirement.txt.
+  4. Write in terminal 'streamlit run .\main.py'
 
 [![Watch the video]](https://youtu.be/AaQBsCmQpq0)
 
