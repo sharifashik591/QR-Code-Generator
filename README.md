@@ -10,10 +10,10 @@
 - [x] Page will automatically reload
 
 ### How to download and install this app
-> Clone the app into a folder.
-> Open it with IDE
-> pip install requirement.txt
-> Write in terminal 'streamlit run .\main.py'
+  > Clone the app into a folder.
+  > Open it with IDE
+  > pip install requirement.txt
+  > Write in terminal 'streamlit run .\main.py'
 
 [![Watch the video]](https://youtu.be/AaQBsCmQpq0)
 
